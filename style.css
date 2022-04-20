@@ -19,9 +19,6 @@ header {
 #logo {
   padding-left: 3vw;
 }
-.nav-bar {
-  color: hsl(233, 8%, 62%) hsl(0, 0%, 98%);
-}
 
 button {
   border-radius: 100px 100px 100px 100px;
@@ -32,7 +29,7 @@ button {
     rgba(75, 214, 30, 1) 0%,
     hsl(192, 70%, 51%) 100%
   );
-  padding: 2vh 2vw;
+  padding: 1rem 1rem;
   color: white;
   border: none;
   font-weight: bold;
@@ -40,7 +37,7 @@ button {
 
 li {
   list-style: none;
-  margin: 1vw;
+  margin: 0.5rem;
 }
 
 .nav-bar {
@@ -54,7 +51,7 @@ li {
   width: 100%;
   justify-content: space-between;
   background-image: url(images/bg-intro-desktop.svg);
-  background-position: 39rem -14rem;
+  background-position: 44rem -14rem;
   overflow: hidden;
   background-repeat: no-repeat;
 }
@@ -62,7 +59,6 @@ li {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: left;
 }
 
 .land-page-logo img {
@@ -70,7 +66,7 @@ li {
 }
 
 .whychoose .txtcolor {
-  width: 40vw;
+  max-width: 37rem;
 }
 
 .land-page-logo svg {
@@ -82,19 +78,20 @@ li {
 }
 
 .landing-page-text {
-  padding: 16vh 5vw;
-  width: 40vw;
+  display: flex;
+  padding: 13rem 10rem;
+  width: 50rem;
 }
 .ul-head {
   font-weight: 400;
-  font-size: 3vw;
+  font-size: 3rem;
 }
 
 .features {
   display: flex;
   flex-direction: column;
   background-color: hsl(220, 16%, 96%);
-  padding: 7vh 10vw;
+  padding: 6rem 10rem;
 }
 .features-flex {
   display: flex;
@@ -106,11 +103,12 @@ li {
 }
 .articles {
   width: 100%;
+  padding: 0 10rem;
 }
 .articles h2 {
-  font-size: 3vw;
+  font-size: 2rem;
   font-weight: 400;
-  padding-left: 2vw;
+  padding: 0 2rem;
 }
 .articles-flex {
   display: flex;
@@ -127,6 +125,11 @@ li {
 
 .article-author {
   font-size: small;
+}
+.article-author,
+.article-desc,
+.article-title {
+  padding: 0% 1rem;
 }
 
 .footer {
@@ -155,4 +158,96 @@ path {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-bottom: 1rem;
+  line-height: 3rem;
+}
+
+header .hams {
+  display: none;
+}
+
+
+@media screen and (max-width: 500px) {
+  nav,
+  .nav-button {
+    display: none;
+  }
+  header .hams {
+    display: block;
+    padding: 1rem 1rem;
+  }
+
+  .landpage {
+    flex-direction: column-reverse;
+    background-image:url(images/bg-intro-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: 0rem -1rem;
+    background-size: contain;   
+
+  }
+  .land-page-logo img {
+    width: 100%;
+    transform: scale(1);
+    object-position: 0 -8rem;
+  }
+  .landing-page-text {
+    justify-content: center;
+    width: auto;
+    padding: 0% 1rem;
+    text-align: center;
+  }
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .features-flex {
+    flex-direction: column;
+
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  .features-ul {
+    align-items: center;
+  }
+
+  .ul-head {
+    font-size: 2rem;
+  }
+  .txtcolor {
+    text-align: center;
+  }
+
+  .whychoose {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .articles {
+    margin: 0;
+    padding: 0;
+  }
+  .articles-flex {
+    flex-direction: column;
+  }
+  .articles h2 {
+    text-align: center;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+  }
+
+  .landing-page-ul {
+    align-items: center;
+  }
 }
