@@ -15,6 +15,7 @@ header {
   justify-content: space-between;
   align-items: center;
   margin: 1vh 1vh;
+  position:relative ;
 }
 #logo {
   padding-left: 3vw;
@@ -51,9 +52,11 @@ li {
   width: 100%;
   justify-content: space-between;
   background-image: url(images/bg-intro-desktop.svg);
-  background-position: 44rem -14rem;
+  background-position: 51rem -14rem;
   overflow: hidden;
   background-repeat: no-repeat;
+  
+    
 }
 .landing-page-ul {
   display: flex;
@@ -61,8 +64,18 @@ li {
   justify-content: center;
 }
 
+
+.land-page-logo{
+  
+  position: absolute;
+   right:0;
+  width: 50rem;
+}
 .land-page-logo img {
-  transform: scale(1.5);
+  width: 100%;
+  object-position: 8rem -12rem;
+ 
+
 }
 
 .whychoose .txtcolor {
@@ -92,6 +105,8 @@ li {
   flex-direction: column;
   background-color: hsl(220, 16%, 96%);
   padding: 6rem 10rem;
+ 
+ 
 }
 .features-flex {
   display: flex;
@@ -185,7 +200,12 @@ header .hams {
     background-size: contain;   
 
   }
+  .land-page-logo{
+    position: static;
+    width: 100%;
+  }
   .land-page-logo img {
+    
     width: 100%;
     transform: scale(1);
     object-position: 0 -8rem;
